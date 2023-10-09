@@ -167,7 +167,7 @@ match the installed program version.
 fi
 
 # Get list of my profiles :)
-mapfile -t list_of_profiles <<< "$(pacman -Qlq krathalans-apparmor-profiles-git | grep -vE 'usr|abstr|/$')"
+mapfile -t list_of_profiles <<< "$(pacman -Qlq my-apparmor-profiles | grep -vE 'usr|abstr|/$')"
 
 for profile in "${list_of_profiles[@]}"; do
   check_profile "${profile##*/}" &
