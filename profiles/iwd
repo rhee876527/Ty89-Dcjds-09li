@@ -1,3 +1,4 @@
+# Updated 9-Oct-23
 # AppArmor profile for iwd NetworkManager backend
 # Version of iwd profiled: 2.8
 # Homepage: https://github.com/krathalan/apparmor-profiles
@@ -28,4 +29,12 @@ profile iwd /usr/lib/iwd/iwd {
 
   # Connection information (e.g. wifi passwords)
   owner /var/lib/iwd/{,**} rw,
+  
+  # Allow write access to /proc/sys/net/ipv6/conf/wlan*/ndisc_evict_nocarrier
+  owner /proc/sys/net/ipv6/conf/wlan*/ndisc_evict_nocarrier w,
+  
+  # Allow write access to /proc/sys/net/ipv4/conf/wlan*/arp_evict_nocarrier
+  owner /proc/sys/net/ipv4/conf/wlan*/arp_evict_nocarrier w,
+}
+
 }
