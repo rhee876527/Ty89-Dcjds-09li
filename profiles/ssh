@@ -1,5 +1,5 @@
 # AppArmor profile for openssh client (NOT SSHD!)
-# Version of ssh (openssh) profiled: 9.4
+# Version of ssh (openssh) profiled: 9.5
 # Homepage: https://github.com/krathalan/apparmor-profiles
 # Copyright 2019-2021 (C) krathalan; Licensed under GPLv3
 
@@ -49,4 +49,10 @@ profile ssh /usr/bin/ssh {
 
   # Silence unnecessary permissions
   deny @{PROC}/{,**} r,
+  
+  # Allow read access to pki
+  /etc/pki/tls/openssl.cnf r,
+  
+  # Allow code to access remote container file
+  @{HOME}/vcontainer/ssh.txt r,
 }
