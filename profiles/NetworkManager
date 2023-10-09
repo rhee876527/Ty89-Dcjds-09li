@@ -1,5 +1,5 @@
 # AppArmor profile for NetworkManager
-# Version of NetworkManager profiled: 1.42.6
+# Version of NetworkManager profiled: 1.44.2
 # Homepage: https://github.com/krathalan/apparmor-profiles
 # Copyright 2019-2022 (C) krathalan; Licensed under GPLv3
 
@@ -74,4 +74,8 @@ profile NetworkManager /usr/bin/NetworkManager {
   deny @{PROC}/cmdline r,
   deny @{PROC}/sys/kernel/osrelease r,
   deny @{PROC}/sys/kernel/random/boot_id r,
+  
+  # allow read access to gnutls config
+  /etc/gnutls/config r,
+  
 }
