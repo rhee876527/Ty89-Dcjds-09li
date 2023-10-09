@@ -1,2 +1,0 @@
-owner @{HOME}/aur/{,**} rw,
-owner @{HOME}/aur-dev/{,**} rw,

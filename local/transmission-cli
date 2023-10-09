@@ -1,2 +1,0 @@
-# Config files in ~/.config/transmission-daemon/ are symlinks to here
-owner @{HOME}/documents/config/home-config/.config/transmission-daemon/* rw,
