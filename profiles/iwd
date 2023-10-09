@@ -29,18 +29,18 @@ profile iwd /usr/lib/iwd/iwd {
   # Connection information (e.g. wifi passwords)
   owner /var/lib/iwd/{,**} rw,
   
-  # Allow write access to /proc/sys/net/ipv6/conf/wlan*/ndisc_evict_nocarrier
-  /proc/sys/net/ipv6/conf/wlan*/ndisc_evict_nocarrier w,
+  # Allow write access to /proc/sys/net/ipv*/conf/wlan*/ndisc_evict_nocarrier
+  /proc/sys/net/ipv*/conf/wlan*/ndisc_evict_nocarrier w,
   
-  # Allow write access to /proc/sys/net/ipv4/conf/wlan*/arp_evict_nocarrier
-  /proc/sys/net/ipv4/conf/wlan*/arp_evict_nocarrier w,
+  # Allow write access to /proc/sys/net/ipv*/conf/wlan*/arp_evict_nocarrier
+  /proc/sys/net/ipv*/conf/wlan*/arp_evict_nocarrier w,
   
-  # Allow write access to /proc/sys/net/ipv6/conf/wlan*/drop_unsolicited_na
-  /proc/sys/net/ipv6/conf/wlan*/drop_unsolicited_na w,
+  # Allow write access to /proc/sys/net/ipv*/conf/wlan*/drop_unsolicited_na
+  /proc/sys/net/ipv*/conf/wlan*/drop_unsolicited_na w,
+
+  #Allow write access to /proc/sys/net/ipv*/conf/wlan*/drop_unicast_in_l2_multicast  
+  /proc/sys/net/ipv*/conf/wlan*/drop_unicast_in_l2_multicast w,
   
-  #Allow write access to /proc/sys/net/ipv4/conf/wlan*/drop_unicast_in_l2_multicast
-  /proc/sys/net/ipv4/conf/wlan*/drop_unicast_in_l2_multicast w,
-  
-  #Allow write access to /proc/sys/net/ipv4/conf/wlan*/drop_gratuitous_arp
-  /proc/sys/net/ipv4/conf/wlan*/drop_gratuitous_arp w,
+  #Allow write access to /proc/sys/net/ipv*/conf/wlan*/drop_gratuitous_arp
+  /proc/sys/net/ipv*/conf/wlan*/drop_gratuitous_arp w,
 }
