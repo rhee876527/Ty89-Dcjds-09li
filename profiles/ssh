@@ -55,4 +55,7 @@ profile ssh /usr/bin/ssh {
   
   # Allow code to access remote container file
   @{HOME}/vcontainer/ssh.txt r,
+  
+  # Allow code to tunnel ssh
+  /run/host/monitor/* r,
 }
