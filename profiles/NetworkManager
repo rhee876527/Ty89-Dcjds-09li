@@ -78,7 +78,7 @@ profile NetworkManager /usr/bin/NetworkManager {
   # allow read access to gnutls config
   /etc/gnutls/config r,
   
-  # Allow read access to audit log - quiet the noise
-  /var/log/audit/audit.log r, 
+  # aa-notify keeps this complaining even though this denial is nowhere in the logs
+  #/var/log/audit/audit.log r, 
   
 }
