@@ -79,6 +79,10 @@ profile NetworkManager /usr/bin/NetworkManager {
   /etc/gnutls/config r,
   
   # aa-notify keeps this complaining even though this denial is nowhere in the logs
-  #/var/log/audit/audit.log r, 
+  #/var/log/audit/audit.log r,
+  
+  # shush resolvconf & dnsmasq when systemd-resolved not in use
+  /usr/bin/dnsmasq x,
+  /usr/bin/resolvconf x, 
   
 }
