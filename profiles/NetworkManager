@@ -82,7 +82,7 @@ profile NetworkManager /usr/bin/NetworkManager {
   #/var/log/audit/audit.log r,
   
   # shush resolvconf & dnsmasq when systemd-resolved not in use
-  /usr/bin/dnsmasq x,
-  /usr/bin/resolvconf x, 
+  /usr/bin/dnsmasq rPx,
+  /usr/bin/resolvconf rPx, 
   
 }
