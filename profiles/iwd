@@ -28,7 +28,7 @@ profile iwd /usr/lib/iwd/iwd {
 
   # Connection information (e.g. wifi passwords)
   owner /var/lib/iwd/{,**} rw,
-  
+    
   # Allow write access to /proc/sys/net/ipv*/conf/wlan*/ndisc_evict_nocarrier
   /proc/sys/net/ipv*/conf/wlan*/ndisc_evict_nocarrier w,
   

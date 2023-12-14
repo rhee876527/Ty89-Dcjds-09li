@@ -83,6 +83,12 @@ profile NetworkManager /usr/bin/NetworkManager {
   
   # shush resolvconf & dnsmasq when systemd-resolved not in use
   /usr/bin/dnsmasq rPx,
-  /usr/bin/resolvconf rPx, 
+  /usr/bin/resolvconf rPx,
   
+  # shush mknod errors
+  /var/lib/iwd/.*\.psk\..* rw,
+  
+  # shush more deny errors
+  /run/systemd/users/* r,
+
 }
