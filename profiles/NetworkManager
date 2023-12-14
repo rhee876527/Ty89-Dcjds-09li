@@ -85,7 +85,7 @@ profile NetworkManager /usr/bin/NetworkManager {
   /usr/bin/dnsmasq rPx,
   /usr/bin/resolvconf rPx,
   
-  # shush mknod errors
+  # allow NetworkManager to edit wifi-passwords (check iwd profile) 
   /var/lib/iwd/.*\.psk\..* rw,
   
   # shush more deny errors
