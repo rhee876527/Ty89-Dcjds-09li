@@ -12,7 +12,7 @@ profile ssh /usr/bin/ssh {
   include <abstractions/perl>
 
   # Executables
-  /usr/bin/{bash,dash} mrix,
+  /usr/bin/{bash,dash,zsh} mrix,
   /usr/bin/env r,
   /usr/bin/ssh r,
 
