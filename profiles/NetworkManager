@@ -76,7 +76,7 @@ profile NetworkManager /usr/bin/NetworkManager {
   deny @{PROC}/sys/kernel/random/boot_id r,
   
   # allow read access to gnutls config
-  /etc/gnutls/config r,
+  owner /etc/gnutls/config r,
   
   # aa-notify keeps this complaining even though this denial is nowhere in the logs
   #/var/log/audit/audit.log r,
