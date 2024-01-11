@@ -34,7 +34,7 @@ profile NetworkManager /usr/bin/NetworkManager {
   capability sys_module,
 
   # Helper programs
-  /usr/bin/{bash,dash} rix,
+  /usr/bin/{bash,dash,zsh} rix,
 
   # Config
   owner /etc/NetworkManager/{,**} r,
