@@ -86,7 +86,7 @@ profile NetworkManager /usr/bin/NetworkManager {
   /usr/bin/resolvconf rPx,
   
   # allow NetworkManager to edit wifi-passwords (check iwd profile) 
-  /var/lib/iwd/.*\.psk\..* rw,
+  /var/lib/iwd/.*\.psk\..* mrw,
   
   # shush more deny errors
   /run/systemd/users/* r,
