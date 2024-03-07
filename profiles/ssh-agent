@@ -16,4 +16,7 @@ profile ssh-agent /usr/bin/ssh-agent {
   
   # Allow code to ssh
   /run/user/1000/keyring/.ssh rwk,
+  
+  # Accommodate gcr changes
+  /run/user/1000/gcr/.ssh mrw,
 }
