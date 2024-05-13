@@ -38,4 +38,7 @@ profile bluetoothd /usr/lib/bluetooth/bluetoothd {
   
   # Silence bluez errors
   /proc/sys/kernel/hostname r,
+  
+  # Allow raw netlink socket
+  network raw,
 }
