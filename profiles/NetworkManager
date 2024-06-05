@@ -83,7 +83,7 @@ profile NetworkManager /usr/bin/NetworkManager flags=(attach_disconnected) {
   /usr/bin/resolvconf rPx,
   
   # allow NetworkManager to edit wifi-passwords (check iwd profile) 
-  /var/lib/iwd/.*\.psk\..* mrw,
+  /var/lib/iwd/.*psk.* mrw,
   
   # shush more deny errors
   /run/systemd/users/* r,
