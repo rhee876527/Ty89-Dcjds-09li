@@ -6,7 +6,7 @@
 abi <abi/3.0>,
 include <tunables/global>
 
-profile NetworkManager /usr/bin/NetworkManager {
+profile NetworkManager /usr/bin/NetworkManager flags=(attach_disconnected) {
   include if exists <local/NetworkManager>
   include <abstractions/base>
   include <abstractions/krathalans-hardening>
@@ -77,9 +77,6 @@ profile NetworkManager /usr/bin/NetworkManager {
   
   # allow read access to gnutls config
   owner /etc/gnutls/config r,
-  
-  # aa-notify keeps this complaining even though this denial is nowhere in the logs
-  #/var/log/audit/audit.log r,
   
   # shush resolvconf & dnsmasq when systemd-resolved not in use
   /usr/bin/dnsmasq rPx,
