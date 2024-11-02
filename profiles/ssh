@@ -58,4 +58,7 @@ profile ssh /usr/bin/ssh {
   
   # Allow code to tunnel ssh
   /run/host/monitor/* r,
+  
+  # Allow ansible to make ssh connection
+  @{HOME}/.ansible/cp/** rwl,
 }
