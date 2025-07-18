@@ -88,4 +88,8 @@ profile NetworkManager /usr/bin/NetworkManager flags=(attach_disconnected) {
   # shush more deny errors
   /run/systemd/users/* r,
 
+  # shush NM vpn menu annoyances
+  /usr/bin/nft ix,
+  /usr/share/iproute2/* r,
+
 }
