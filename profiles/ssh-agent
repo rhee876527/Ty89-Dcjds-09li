@@ -14,9 +14,6 @@ profile ssh-agent /usr/bin/ssh-agent {
 
   owner /run/user/*/ssh-agent.socket w,
   
-  # Allow code to ssh
-  /run/user/1000/keyring/.ssh rwk,
-  
   # Accommodate gcr changes
   /run/user/1000/gcr/.ssh mrw,
 }

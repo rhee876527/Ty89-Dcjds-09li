@@ -53,12 +53,6 @@ profile ssh /usr/bin/ssh {
   # Allow read access to pki
   /etc/pki/tls/openssl.cnf r,
   
-  # Allow code to access remote container file
-  @{HOME}/vcontainer/ssh.txt r,
-  
-  # Allow code to tunnel ssh
-  /run/host/monitor/* r,
-  
   # Allow ansible to make ssh connection
   @{HOME}/.ansible/cp/** rwl,
 }
