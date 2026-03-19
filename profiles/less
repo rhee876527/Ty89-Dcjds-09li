@@ -24,4 +24,7 @@ profile less /usr/bin/less {
 
   # Silence unnecessary permissions
   deny /{,**} w,
+
+  # Allow receiving SIGHUP from Nautilus
+  signal (receive) set=hup peer=nautilus,
 }
