@@ -55,4 +55,7 @@ profile ssh /usr/bin/ssh {
   
   # Allow ansible to make ssh connection
   @{HOME}/.ansible/cp/** rwl,
+
+  # Accommodate gvfsd-sftp changes
+  owner /run/user/1000/gvfsd-sftp/* rwl,
 }
