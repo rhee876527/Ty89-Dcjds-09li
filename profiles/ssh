@@ -58,4 +58,9 @@ profile ssh /usr/bin/ssh {
 
   # Accommodate gvfsd-sftp changes
   owner /run/user/1000/gvfsd-sftp/* rwl,
+
+  # Allow {SIG}TERM/INT/HUP from nautilus
+  signal receive set=term peer=nautilus,
+  signal receive set=int peer=nautilus,
+  signal receive set=hup peer=nautilus,
 }
