@@ -27,4 +27,7 @@ profile less /usr/bin/less {
 
   # Allow receiving SIGHUP from Nautilus
   signal (receive) set=hup peer=nautilus,
+  
+  # Allow sending sigterm to unconfined processes
+  signal send set=term peer=unconfined,
 }
