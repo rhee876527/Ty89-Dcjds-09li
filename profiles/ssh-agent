@@ -16,4 +16,8 @@ profile ssh-agent /usr/bin/ssh-agent {
   
   # Accommodate gcr changes
   /run/user/1000/gcr/.ssh mrw,
+
+  # openssh 10.6+ needs these
+  /etc/nsswitch.conf r,
+  /etc/passwd r,
 }
